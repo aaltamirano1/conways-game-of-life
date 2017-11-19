@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conway's Game of Life</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		.main{
+			display: flex;
+			margin: auto;
+			padding-top: 20px;
+			width: 80%;
+		}
+		.sidebar{
+			margin-left: 10px;
+		}
+		.row{
+			width: 472px;
+			display: flex;
+		}		
+		.cell{
+			width: 50px;
+			height: 50px;
+			border: 2px solid #03C9A9;
+			border-radius: 10px;
+			margin: 1px;
+		}
+		.alive{
+			background-color: #36D7B7;
+		}
+		.dead{
+			background-color: white;
+		}
+		p{
+			text-align: center;
+			margin-top: 40%;
+			font-family: arial;
+			font-size: 1.5em;
+			color: grey;
+		}
+		h1{
+			padding-left: 15px;
+		}
+		li{
+			margin-bottom: 10px;
+		}
+		button{
+			text-align: center;
+			background-color: #03C9A9;
+			color: white;
+			padding: 10px;
+			width: 70px;
+			margin-left: 40%;
+			border-radius: 10px;
+			font-family: arial;
+			letter-spacing: 1px;
+		}
+
+	</style>
+</head>
+
+<body>
+<div class="main">
+	<div id="grid">
+
+	</div>
+	<div class="sidebar">
+		<h1>Rules</h1>
+		<ol>
+			<li>A live cell with fewer than 2 live neighbours dies. (underpopulation)</li>
+			<li>A live cell with 2 or 3 live neighbours lives on to the next generation.</li>
+			<li>A live cell with more than 3 live neighbours dies. (overpopulation)</li>
+			<li>A dead cell with 3 live neighbours becomes a live cell.</li>
+		</ol>
+		<button>Start</button>
+	</div>
+</div>
+
+  <script src="Game.js"></script>
+
+</body>
+</html>
